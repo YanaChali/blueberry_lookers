@@ -1,0 +1,57 @@
+@mixin catalog {
+    display: grid;
+    max-width: 1420px;
+    margin: 0 auto;
+    /*grid-template-columns: repeat(auto-fill, minmax(375px, 1fr)); /*исправить*/
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 30px;
+}
+@mixin upTitle {
+    font-size: $main_catalog__font-size;
+    font-family: $main_catalog__font-title;
+    color: $title-color-dark;
+    margin-bottom: 15.1px;
+}
+
+
+@mixin leftCard {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+@mixin rightCard {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+@mixin middleCard {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+@mixin endCard {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+
+.main_catalog{
+    @include catalog;
+}
+.main_catalog__part_left{
+    @include leftCard;
+}
+.main_catalog__part_right{
+    @include rightCard;
+}
+.main_catalog__part_middle{
+    @include middleCard;
+}
+.main_catalog__part_end{
+    @include endCard;
+}
+.item-part__title {
+    @include upTitle;
+    @font-face {
+        font-family: 'PT Root UI';
+        src: local('PT Root UI'), url('/assets/fonts/PT\ Root\ UI_Bold.otf') format('otf');
+        font-style: normal;
+    }
+}
