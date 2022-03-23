@@ -2,31 +2,37 @@
     display: grid;
     max-width: 1420px;
     margin: 0 auto;
-    /*grid-template-columns: repeat(auto-fill, minmax(375px, 1fr)); /*исправить*/
+    grid-template-columns: repeat(auto-fill, 694px); /*исправить*/
     grid-template-rows: repeat(3, auto);
     grid-gap: 30px;
-}
-@mixin upTitle {
-    font-size: $main_catalog__font-size;
-    font-family: $main_catalog__font-title;
-    color: $title-color-dark;
-    margin-bottom: 15.1px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 
 @mixin leftCard {
+    display: flex;
+    position: relative;
     grid-column: 1/2;
     grid-row: 1/2;
+    flex-direction: column;
 }
 @mixin rightCard {
     grid-column: 2/3;
     grid-row: 1/2;
 }
 @mixin middleCard {
+    display: flex;
+    position: relative;
+    align-items: center;
     grid-column: 1/3;
     grid-row: 2/3;
 }
 @mixin endCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-column: 1/3;
     grid-row: 3/4;
 }
@@ -46,12 +52,86 @@
 }
 .main_catalog__part_end{
     @include endCard;
+    // background-size: cover;
 }
-.item-part__title {
+
+/*Заголовки*/
+@mixin upTitle {
+    font-size: $main_catalog__font-size;
+    color: $title-color-dark;
+    margin-bottom: 15.1px;
+    text-transform: uppercase;
+    font-family: $main_catalog__font-title;
+}
+@mixin midTitle {
+    font-size: $main_catalog__font-size;
+    font-family: $main_catalog__font-title;
+    color: $title-color-light;
+    position: absolute;
+    text-transform: uppercase;
+}
+.item-part__title1-1 {
     @include upTitle;
-    @font-face {
-        font-family: 'PT Root UI';
-        src: local('PT Root UI'), url('/assets/fonts/PT\ Root\ UI_Bold.otf') format('otf');
-        font-style: normal;
+}
+.item-part__title1-2{
+    @include upTitle
+}
+.item-part__title2{
+    @include midTitle;
+    left: 32.2%;
+}
+.item-part__title3{
+    @include midTitle;
+    margin: 3.2% auto;
+}
+
+/*Кнопки*/
+@mixin buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48.41px;
+    width: 212px;
+    background-color: $button-color;
+    color: $button-text-color;
+    font-size: $button__font-size;
+    font-family: $main_catalog__font-title;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+}
+.item-part_left__button, .item-part_middle__button, .item-part_end__button{
+    @include buttons;
+}
+@mixin num1Button {
+    right: 35%;
+    bottom: 45%;
+}
+@mixin num2Button {
+    right: 32.3%;
+}
+@mixin num3Button {
+    margin-top: 17.5%;
+}
+.num1{
+    @include  num1Button;
+}
+.num2{
+    @include num2Button;
+}
+.num3{
+    @include num3Button;
+}
+/*Мобильная версия*/
+@media screen and (max-width: $mobile){
+.main_catalog{
+    width: 375px;
     }
+.main_catalog__part_left, .main_catalog__part_right, .main_catalog__part_middle,.main_catalog__part_end{
+    width: 345px;
+}
+.item-part_left__button{
+    display: none;
+}
+
 }
