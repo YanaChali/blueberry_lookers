@@ -493,19 +493,32 @@ template {
     display: flex;
     margin: 30px 15px;
   }
-  .num1 {
-    display: none;
-  }
-  .num2, .num3 {
-    margin-bottom: 107.09px;
-  }
-  img {
-    width: 100%;
-  }
   .main_catalog__part_middle, .main_catalog__part_end {
     height: 313.6px;
     width: 345px;
     overflow: hidden;
+  }
+  /*Заголовки*/
+  .item-part__title2, .item-part__title3 {
+    width: 304px;
+    text-align: center;
+  }
+  .item-part__title2 {
+    margin-bottom: 105px;
+    left: 21px;
+  }
+  .item-part__title3 {
+    margin-bottom: 76px;
+  }
+  /*Кнопки*/
+  .num1 {
+    display: none;
+  }
+  .num2 {
+    right: 66.5px;
+  }
+  img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
