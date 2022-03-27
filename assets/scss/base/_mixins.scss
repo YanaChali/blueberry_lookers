@@ -1,0 +1,161 @@
+@mixin catalog {
+    display: flex;
+    max-width: 1420px;
+    margin: 0 auto;
+    grid-gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+/*Разделы*/
+@mixin leftCard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+@mixin middleCard {
+    background-image: url(/assets/images/bagsvg.svg);
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 289px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+        .item-part_middle__image{
+            display: none;
+    }
+}
+@mixin endCard {
+    background-image: url(/assets/images/woman_end.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 630.6px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main_catalog{
+    @include catalog;
+}
+.main_catalog__part_left{
+    @include leftCard;
+}
+.main_catalog__part_middle{
+    @include middleCard;
+    }
+
+.main_catalog__part_end{
+    @include endCard;
+}
+
+/*Заголовки*/
+@mixin upTitle {
+    font-size: $main_catalog__font-size;
+    color: $title-color-dark;
+    margin-bottom: 15.1px;
+    text-transform: uppercase;
+    font-family: $main_catalog__font-title;
+}
+@mixin midTitle {
+    font-size: $main_catalog__font-size;
+    font-family: $main_catalog__font-title;
+    color: $title-color-light;
+    position: absolute;
+    text-transform: uppercase;
+}
+.item-part__title1-1 {
+    @include upTitle;
+}
+.item-part__title1-2{
+    @include upTitle
+}
+.item-part__title2{
+    @include midTitle;
+    left: 32.2%;
+}
+.item-part__title3{
+    @include midTitle;
+    margin: 3.2% auto;
+}
+
+/*Кнопки*/
+@mixin buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48.41px;
+    width: 212px;
+    background-color: $button-color;
+    color: $button-text-color;
+    font-size: $button__font-size;
+    font-family: $main_catalog__font-title;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+}
+.item-part_left__button, .item-part_middle__button, .item-part_end__button{
+    @include buttons;
+}
+@mixin num1Button {
+    right: 35%;
+    bottom: 45%;
+}
+@mixin num2Button {
+    right: 32.3%;
+}
+@mixin num3Button {
+    margin-top: 17.5%;
+}
+.num1{
+    @include num1Button;
+}
+.num2{
+    @include num2Button;
+}
+.num3{
+    @include num3Button;
+}
+/*Мобильная версия*/
+@media screen and (max-width: $mobile){
+    .main_catalog{
+        display: flex;
+        margin: 30px 15px;
+    }
+    .main_catalog__part_middle, .main_catalog__part_end{
+        height: 313.6px;
+        width: 345px;
+        overflow: hidden;
+    }
+    /*Заголовки*/
+    .item-part__title2, .item-part__title3{
+        width: 304px;
+        text-align: center;
+    }
+    .item-part__title2{
+        margin-bottom: 105px;
+        left: 21px;
+    }
+    .item-part__title3{
+        margin-bottom: 76px;
+    }
+    /*Кнопки*/
+    .num1{
+        display: none;
+    }
+    .num2{
+        right: 66.5px;
+    }
+    img{
+        width: 100%;
+    }
+    
+    
+}
