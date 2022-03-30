@@ -13,8 +13,22 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    img{
+        width: 693.76px;
+    }
 }
-
+@mixin rightCard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    img{
+        width: 693.76px;
+    }
+    .numA{
+        right: 35%;
+        bottom: 45%;
+    }
+}
 @mixin middleCard {
     background-image: url(/assets/images/bagsvg.svg);
     display: flex;
@@ -27,7 +41,7 @@
     background-position: center;
         .item-part_middle__image{
             display: none;
-    }
+        }
 }
 @mixin endCard {
     background-image: url(/assets/images/woman_end.svg);
@@ -48,9 +62,16 @@
 .main_catalog__part_left{
     @include leftCard;
 }
+.main_catalog__part_right{
+    @include rightCard;
+    .item-part_left__image{
+        justify-content: center;
+        align-items: center;
+    }
+}
 .main_catalog__part_middle{
     @include middleCard;
-    }
+}
 
 .main_catalog__part_end{
     @include endCard;
@@ -86,6 +107,32 @@
     margin: 3.2% auto;
 }
 
+/*Градиенты*/
+.item-part_left__image:hover:before {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 90%;  
+    background: transparent;
+    background-image: linear-gradient(180deg, rgba(236, 176, 24, 0.42) 0%, rgba(55, 55, 55, 0.44) 100%);
+    position: absolute;
+    opacity: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+.item-part_right__image:hover:before {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 90%;  
+    background: transparent;
+    background-image: linear-gradient(180deg, rgba(236, 176, 24, 0.42) 0%, rgba(55, 55, 55, 0.44) 100%);
+    position: absolute;
+    opacity: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+
 /*Кнопки*/
 @mixin buttons {
     display: flex;
@@ -101,12 +148,21 @@
     text-decoration: none;
     position: absolute;
 }
+.item-part_left__image:hover .num1 {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.item-part_right__image:hover .numA {
+    opacity: 1;
+    transition: opacity .5s;
+}
 .item-part_left__button, .item-part_middle__button, .item-part_end__button{
     @include buttons;
 }
 @mixin num1Button {
     right: 35%;
     bottom: 45%;
+    opacity: 0;
 }
 @mixin num2Button {
     right: 32.3%;
@@ -114,6 +170,12 @@
 @mixin num3Button {
     margin-top: 17.5%;
 }
+@mixin numAButton {
+    right: 19%;
+    bottom: 45%;
+    opacity: 0;
+}
+
 .num1{
     @include num1Button;
 }
@@ -123,8 +185,12 @@
 .num3{
     @include num3Button;
 }
+.numA{
+    @include numAButton;
+}
+
 /*Мобильная версия*/
-@media screen and (max-width: $mobile){
+@media screen and (max-width: $mobile) {
     .main_catalog{
         display: flex;
         margin: 30px 15px;
@@ -147,15 +213,42 @@
         margin-bottom: 76px;
     }
     /*Кнопки*/
-    .num1{
-        display: none;
-    }
-    .num2{
+    .num3{
         right: 66.5px;
     }
-    img{
-        width: 100%;
+    .item-part_left__image:hover .num1 {
+        opacity: 1;
+        transition: opacity .3s;
     }
-    
-    
+    .item-part_right__image:hover .numA {
+        opacity: 1;
+        transition: opacity .3s;
+}
+    img{
+        max-width: 345px;
+    }
+}
+@media screen and (min-width:377px) {
+    .main_catalog {
+        display: flex;
+        max-width: 1420px;
+        margin-left: auto;
+        grid-gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 80px;
+        font-size: 80%;
+    }
+    .main_catalog__part_middle, .main_catalog__part_end {
+        margin: 0 15px;
+    }
+    .wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        grid-gap: 30px;
+        margin: 0 15px;
+    }
+    img{
+        max-width: 100%;
+    }
 }
