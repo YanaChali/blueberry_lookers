@@ -19,3 +19,14 @@
     text-transform: uppercase;
     font-weight: 700;
 }
+@mixin backIMG {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: 30px;
+}
