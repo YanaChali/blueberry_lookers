@@ -628,7 +628,7 @@ template {
 
 @media (max-width: 376px) {
   .background__container {
-    background-size: 50%;
+    max-width: 50%;
   }
   .content__title {
     font-size: 38px;
