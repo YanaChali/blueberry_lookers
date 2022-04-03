@@ -1,0 +1,188 @@
+.slider {
+    display: grid;
+
+    grid-template-areas: "header header header header header header"
+        "card-1 card-2 card-3 card-4 card-5 card-6";
+    grid-template-columns: repeat(6, 212px);
+    grid-template-rows: 41px 344px;
+    column-gap: 30px;
+    row-gap: 15px;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
+
+.slider__header {
+    grid-area: header;
+}
+
+
+.sslider__card-1 {
+    grid-area: card-1;
+}
+
+.slider__card-2 {
+    grid-area: card-2;
+}
+
+.slider__card-3 {
+    grid-area: card-3;
+}
+
+.slider__card-4 {
+    grid-area: card-4;
+}
+
+.slider__card-5 {
+    grid-area: card-5;
+}
+
+.slider__card-6 {
+    grid-area: card-6;
+}
+
+.slider__card__name {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+    color: #373737;
+    position: relative;
+    bottom: 15px;
+}
+
+.slider__card__price-black {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: #373737;
+    position: relative;
+    bottom: 15px;
+
+}
+
+.slider__card__price-red {
+    display: inline-block;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    /* identical to box height, or 27px */
+    color: #F53030;
+    position: relative;
+    bottom: 15px;
+}
+
+.slider__card__price-crossed {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+
+    text-decoration-line: line-through;
+
+    color: #373737;
+    position: relative;
+    bottom: 15px;
+}
+
+.slider__card__pic {
+    position: relative;
+
+}
+
+.slider__card__die-red {
+    max-width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: red;
+    position: relative;
+    bottom: 48px;
+
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    color: #FFFFFF;
+}
+
+.slider__card__die-black {
+    max-width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: black;
+    position: relative;
+    bottom: 48px;
+
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    color: #FFFFFF;
+}
+
+.slider__card__die-orange {
+    max-width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    background-color: #CDA434;
+    position: relative;
+    bottom: 48px;
+
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+
+    color: #FFFFFF;
+}
+
+.slider__header {
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 150%;
+    /* identical to box height, or 40px */
+
+    text-transform: uppercase;
+
+    color: #373737;
+}
+.slider__card__heart{
+    position: relative;
+    bottom: 350px;
+    left: 170px;
+}
+.slider__card__button{
+    position: relative;
+    bottom: 260px;
+    left: 154px;
+}
