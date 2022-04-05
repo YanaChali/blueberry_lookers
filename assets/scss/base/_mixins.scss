@@ -95,18 +95,27 @@
     margin: 3.2% auto;
 }
 
-/*Кнопки*/
-@mixin buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48.41px;
-    width: 212px;
-    background-color: $button-color;
+@mixin whiteButton {
+    background-color: $white-color;
+    text-decoration: none;
     color: $button-text-color;
-    font-size: $button__font-size;
-    font-family: $main_catalog__font-title;
+    padding: 12px 25px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
     text-transform: uppercase;
+    font-weight: 700;
+}
+@mixin backIMG {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: 30px;
     text-decoration: none;
     position: absolute;
 }

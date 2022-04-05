@@ -1,14 +1,19 @@
 /* Цвета */
-$button-color: #FFFFFF;
-$button-text-color: #373737;
-$title-color-light: #FFFFFF;
-$title-color-dark: #373737;
-$text-color-gold: #CDA434;
+$base-dark-color: #373737;
+$white-color: #FFFFFF;
+
+$button-color: $white-color;
+$button-text-color: $base-dark-color;
+$title-color-light: $white-color;
+$title-color-dark: $base-dark-color;
+
+$default-transition: opacity .2s ease;
 
 /* Шрифты */
 $main_catalog__font-size: 1.6875em;
 $button__font-size: 0.9375em;
-$main_catalog__font-title: 'PT Root UI',
-sans-serif;
+$main_catalog__font-title: 'PT Root UI', sans-serif;
+
 /*Брейкпоинты медиазроса*/
+$tablet: 1024px;
 $mobile: 376px;
