@@ -1,0 +1,22 @@
+/* Цвета */
+$base-dark-color: #373737;
+$white-color: #FFFFFF;
+
+$button-color: #CDA434;
+$button-text-color__light: $white-color;
+$button-text-color__dark: $base-dark-color;
+$title-color-gray: #A5A5A5;
+$title-color-light: $white-color;
+$title-color-dark: $base-dark-color;
+
+/* Шрифты */
+$font-size__title: 1.6875em;
+$font-size__button-text: 0.9375em;
+$font-size__raiting-text: 0.875em;
+$font-size__raiting-subtitle: 1.125em;
+$font-size__button-new: 0.75em;
+$cart_product__font-family: 'PT Root UI', sans-serif;
+
+/*Брейкпоинты медиазроса*/
+$tablet: 1024px;
+$mobile: 376px;

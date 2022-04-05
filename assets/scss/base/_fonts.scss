@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'PT Root UI Bold';
+    src: url('/assets/fonts/Ptrootuibold.woff2') format('woff2'),
+         url('/assets/fonts/Ptrootuibold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('/assets/fonts/Ptrootui.woff2') format('woff2'),
+         url('/assets/fonts/Ptrootui.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

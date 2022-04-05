@@ -4,9 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продукт</title>
+    <title>Card product</title>
+    <link rel="stylesheet" href="/assets/scss/main.css"/>
 </head>
 <body>
+    <div class="wrapper_product">
+        <div class="product__images">
+            <img src="/assets/images/left_man.png" alt="man_photo1"/>
+            <img src="/assets/images/right_man.jpg" alt="man_photo2"/>
+        </div>
+        <div class="product_info">
+            <div class="product_info__header">
+                <div class="header__raiting">
+                    <img src="/assets/images/stars.png" alt="stars"/>
+                    <span>(15)</span>
+                </div>
+                <div class="header__title">
+                    <h2>Лонгслив “Stive”</h2>
+                </div>
+                <div class="header__price">
+                    <span class="price_main">3200 &#x20bd</span>
+                    <span class="price_new">Новинка</span>
+                </div>
+                
+            </div>
+            <img src="/assets/images/line.svg" alt="line"/>
+            <div class="product_info__main">
+                <div class="main__sizes">
+                    <a class="sizes_link" href="..." >Таблица размеров</a>
+                    <ul class="sizes_list">
+                        <li class="sizes_list__items">xs</li>
+                        <li class="sizes_list__items">s</li>
+                        <li class="sizes_list__items">m</li>
+                        <li class="sizes_list__items">l</li>
+                        <li class="sizes_list__items">xl</li>
+                        <li class="sizes_list__items">xxl</li>
+                    </ul>
+                </div>
+                <div class="main__colors">
+                    <p class="colors_text">Цвет:
+                        <span class="text_color">белый</span>
+                    </p>
+                    <div class="colors_container">
+                        <div class="container_selector">
+                            <img src="/assets/images/small_left_man.jpg" alt="small_photo1"/>
+                            <img src="/assets/images/small_right_man.jpg" alt="small_photo2"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__buttons">
+                    <span class="buttons_add">Добавить в корзину</span>
+                    <img class="buttons_like" src="/assets/images/heart.svg" alt="like"/>
+                </div>
+                <div class="main__details">
+                    <div class="details_title">
+                        <h3>Описание</h3>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Состав</span>
+                        <span class="details_item__text">Хлопок - 99%, Полиэстер - 1%</span>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Рост модели на фото</span>
+                        <span class="details_item__text">182 см</span>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Размер товара на фото</span>
+                        <span class="details_item__text">M</span>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Производитель</span>
+                        <span class="details_item__text">Россия, “LOCKERS”</span>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Длина</span>
+                        <span class="details_item__text">78 см</span>
+                    </div>
+                    <div class="details_item">
+                        <span class="details_item__title">Длина рукава:</span>
+                        <span class="details_item__text">68 см</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="product__raiting">
+            <div class="product_raiting__title">
+                <h3>Отзывы (15)</h3>
+            </div>
+            <div class="product_raiting__forms">
+                <input name="user_text" type="text" value="Оставьте отзыв о товаре" />
+                <img src="/assets/images/white_stars.png" alt="white_stars"/>
+                <button type="submit">Отправить</button>
+            </div>
+            <div class="product_raiting__text">
+                <div class="text_part1">
+                    <div class="text_part__header">
+                        <h4>Андрей Семёнов</h4>
+                        <img src="/assets/images/four_stars.png" alt="raiting_stars"/>
+                    </div>
+                    <div class="text_part__main">
+                        <p>Заказ пришел в течение 6 дней. Приятные менеджеры у магазина, всё доступно и понятно.<br>
+                        Из минусов: на лонгсливе была обнаружена маленькая дырочка. Жаловаться не стал, потому что её не видно, но из-за этого не могу поставить 5 звёзд.</p>
+                    </div>
+                </div>
+                <div class="text_part2">
+                    <div class="text_part__header">
+                        <h4>Андрей Семёнов</h4>
+                        <img src="/assets/images/four_stars.png" alt="raiting_stars"/>
+                    </div>
+                    <div class="text_part__main">
+                        <p>Заказ пришел в течение 6 дней. Приятные менеджеры у магазина, всё доступно и понятно.<br>
+                        Из минусов: на лонгсливе была обнаружена маленькая дырочка. Жаловаться не стал, потому что её не видно, но из-за этого не могу поставить 5 звёзд.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+        </div>
+    </div>
     
 </body>
 </html>

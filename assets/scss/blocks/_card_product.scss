@@ -1,0 +1,258 @@
+.wrapper_product {
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 1460px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 133px;
+    font-size: 80%;
+    justify-content: center;
+    justify-content: flex-start;
+
+    .product__images {
+        max-width: 1059px;
+        max-height: 702.32px;
+        display: flex;
+        margin-right: 30px;
+        justify-content: center;
+    }
+
+    a{
+        font-family: 'PT Root UI', sans-serif;
+        text-decoration: underline;
+        color: $title-color-gray;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .product_info {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin: 0;
+        // justify-content: flex-start;
+
+            .product_info__header{
+                width: max-content;
+                font-family: 'PT Root UI Bold', sans-serif;
+                margin-bottom: 30px;
+                
+                .header__title{
+                    @include titles;
+
+                        h2{
+                            margin: 15.75px  0;
+                            text-transform: uppercase;
+                        }
+                }
+
+                .header__raiting{
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 15px;
+                    font-size: $font-size__button-text;
+                }
+
+                .header__price{
+                    display: flex;
+                    align-items: center;
+                    font-size: $font-size__raiting-subtitle;
+                    grid-gap: 30px;
+
+                        .price_new{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: $font-size__button-new;
+                            background-color: $button-color;
+                            color: $white-color;
+                            width: 77px;
+                            height: 24px;
+                            padding: 3px 14px;
+                        }
+                }
+            }
+
+            .product_info__main{
+                margin-top: 30px;
+
+                .main__sizes{
+                    font-family: 'PT Root UI', sans-serif;
+                    justify-content: center;
+
+                    .sizes_list{
+                        display: flex;
+                        justify-content: space-between;
+                        padding-left: 0;
+                        margin-top: 15px;
+                        margin-bottom: 30px;
+                    }
+
+                        .sizes_list__items{
+                            display: flex;
+                            border: 1.6px solid $base-dark-color;
+                            border-color: $base-dark-color;
+                            width: 36.94px;
+                            height: 36.94px;
+                            font-family: 'PT Root UI', sans-serif;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .sizes_list__items:not(:last-child){
+                            margin-right: 15px;
+                        }
+                    }
+
+                .main__colors{
+                        
+                        .colors_text{
+                            font-family: 'PT Root UI', sans-serif;
+                            font-size: $font-size__button-text;
+                            color: $title-color-gray;
+                            margin: 0 auto;
+
+                            .text_color{
+                                font-weight: 700;
+                                color: $base-dark-color;
+                            }
+                        }
+
+                        .colors_container{
+                            margin-top: 15px;
+
+                            .container_selector{
+                                display: flex;
+                                justify-content: flex-start;
+                                grid-gap: 15px;
+                            }
+                        }
+                    }
+
+                .main__buttons{
+                    display: flex;
+                    margin-top: 30px;
+                    justify-content: space-between;
+                    grid-gap: 16px;
+
+                    .buttons_add{
+                        display: flex;
+                        width: 291.13px;
+                        height: 48px;
+                        background-color: $button-color;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 12.71px, 28.91px;
+                        color: $white-color;
+                        font-family: 'PT Root UI Bold',sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .main__details{
+                    display: flex;
+                    flex-direction: column;
+
+                    .details_title{
+                        @include titles;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+
+                        h3{
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .details_item{
+                        display: flex;
+                        height: 46px;
+                        flex-direction: column;
+                        font-family: 'PT Root UI',sans-serif;
+                        grid-gap: 3px;
+                        font-size: $font-size__button-text;
+                        
+                        .details_item__title{
+                            color: $title-color-gray;
+                        }
+
+                        &:not(:last-child){
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .product__raiting {
+        max-width: 1088px;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0 ;
+
+        .product_raiting__title{
+            @include titles;
+
+            h3{
+                margin: 0 auto;
+            }
+        }
+
+        .product_raiting__forms{
+            display: flex;
+            align-items: center;
+            margin-top: 14.68px;
+            margin-bottom: 29.74px;
+            grid-gap: 45px;
+            font-family: 'PT Root UI',sans-serif;
+
+            input{
+                padding: 12.53px 380.12px 13.47px 22.63px;
+                border: 2px solid black;
+                font-size: $font-size__button-text;
+                color: $title-color-gray;
+            }
+            button{
+                padding: 12.71px 54.02px;
+                border: 2px solid;
+                background-color: white;
+                font-size: $font-size__button-text;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+        .product_raiting__text{
+            display: flex;
+            flex-direction: column;
+
+            .text_part__header{
+                display: flex;
+                align-items: center;
+                grid-gap: 15px;
+
+                h4{
+                    font-family: 'PT Root UI Bold', sans-serif;
+                    font-size: $font-size__raiting-subtitle;
+                    margin: 0;
+                }
+            }
+            .text_part__main{
+                margin-top: 5px;
+                margin-bottom: 30px;
+
+                    p{
+                        font-family: 'PT Root UI', sans-serif;
+                        font-size: $font-size__raiting-text;
+                        margin: 0;
+                    }
+                }
+                
+            }
+            
+        }
+    

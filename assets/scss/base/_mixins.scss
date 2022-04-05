@@ -1,0 +1,22 @@
+@mixin titles {
+    text-transform: uppercase;
+    font-size: $font-size__title;
+    font-weight: 700;
+    font-family: 'PT Root UI Bold',sans-serif;
+
+    @media (max-width: $tablet) {
+        font-size: 24px;
+    }
+}
+
+@mixin goldButton {
+    background-color: $button-color;
+    text-decoration: none;
+    color: $button-text-color__light;
+    padding: 12.71px 28.91px;
+    font-size: $font-size__button-text;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
