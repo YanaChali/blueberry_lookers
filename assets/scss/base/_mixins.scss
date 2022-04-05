@@ -25,10 +25,12 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
-        .item-part_middle__image{
-            display: none;
+
+    .item-part_middle__image {
+        display: none;
     }
 }
+
 @mixin endCard {
     background-image: url(/assets/images/woman_end.svg);
     display: flex;
@@ -42,17 +44,19 @@
 }
 
 
-.main_catalog{
+.main_catalog {
     @include catalog;
 }
-.main_catalog__part_left{
+
+.main_catalog__part_left {
     @include leftCard;
 }
-.main_catalog__part_middle{
-    @include middleCard;
-    }
 
-.main_catalog__part_end{
+.main_catalog__part_middle {
+    @include middleCard;
+}
+
+.main_catalog__part_end {
     @include endCard;
 }
 
@@ -64,6 +68,7 @@
     text-transform: uppercase;
     font-family: $main_catalog__font-title;
 }
+
 @mixin midTitle {
     font-size: $main_catalog__font-size;
     font-family: $main_catalog__font-title;
@@ -71,17 +76,21 @@
     position: absolute;
     text-transform: uppercase;
 }
+
 .item-part__title1-1 {
     @include upTitle;
 }
-.item-part__title1-2{
+
+.item-part__title1-2 {
     @include upTitle
 }
-.item-part__title2{
+
+.item-part__title2 {
     @include midTitle;
     left: 32.2%;
 }
-.item-part__title3{
+
+.item-part__title3 {
     @include midTitle;
     margin: 3.2% auto;
 }
@@ -101,61 +110,94 @@
     text-decoration: none;
     position: absolute;
 }
-.item-part_left__button, .item-part_middle__button, .item-part_end__button{
+
+@mixin mainbutton {
+    display: inline-block;
+    color: #373737;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: none;
+    padding: 15px;
+    margin: 20px auto 50px auto;
+    min-width: 212px;
+    text-decoration: none;
+    border-color: #373737;
+}
+
+
+.item-part_left__button,
+.item-part_middle__button,
+.item-part_end__button {
     @include buttons;
 }
+
 @mixin num1Button {
     right: 35%;
     bottom: 45%;
 }
+
 @mixin num2Button {
     right: 32.3%;
 }
+
 @mixin num3Button {
     margin-top: 17.5%;
 }
-.num1{
+
+.num1 {
     @include num1Button;
 }
-.num2{
+
+.num2 {
     @include num2Button;
 }
-.num3{
+
+.num3 {
     @include num3Button;
 }
+
 /*Мобильная версия*/
-@media screen and (max-width: $mobile){
-    .main_catalog{
+@media screen and (max-width: $mobile) {
+    .main_catalog {
         display: flex;
         margin: 30px 15px;
     }
-    .main_catalog__part_middle, .main_catalog__part_end{
+
+    .main_catalog__part_middle,
+    .main_catalog__part_end {
         height: 313.6px;
         width: 345px;
         overflow: hidden;
     }
+
     /*Заголовки*/
-    .item-part__title2, .item-part__title3{
+    .item-part__title2,
+    .item-part__title3 {
         width: 304px;
         text-align: center;
     }
-    .item-part__title2{
+
+    .item-part__title2 {
         margin-bottom: 105px;
         left: 21px;
     }
-    .item-part__title3{
+
+    .item-part__title3 {
         margin-bottom: 76px;
     }
+
     /*Кнопки*/
-    .num1{
+    .num1 {
         display: none;
     }
-    .num2{
+
+    .num2 {
         right: 66.5px;
     }
-    img{
+
+    img {
         width: 100%;
     }
-    
-    
+
+
 }
