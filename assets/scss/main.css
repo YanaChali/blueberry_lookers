@@ -375,6 +375,12 @@ body {
   font-size: 80%;
 }
 
+@media (max-width: 376px) {
+  .main_catalog {
+    margin-bottom: 30px;
+  }
+}
+
 .main_catalog .link-button {
   background-color: #FFFFFF;
   text-decoration: none;
@@ -492,6 +498,163 @@ body {
 @media (max-width: 1460px) {
   .main_catalog {
     padding: 0 15px;
+  }
+}
+
+.main_catalog__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-top: 30px;
+  background: url(/assets/images/bag.svg);
+  height: 289px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 376px) {
+  .main_catalog__middle {
+    height: 313px;
+  }
+}
+
+.main_catalog__middle .main_catalog__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 24px;
+}
+
+@media (max-width: 376px) {
+  .main_catalog__middle .main_catalog__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.main_catalog__middle .link-button {
+  background-color: #FFFFFF;
+  text-decoration: none;
+  color: #373737;
+  padding: 12px 25px;
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  min-width: 212px;
+  opacity: 1;
+}
+
+.main_catalog__middle .box__title {
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .main_catalog__middle .box__title {
+    font-size: 24px;
+  }
+}
+
+.main_catalog__end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-top: 30px;
+  background: url(/assets/images/woman_end.svg);
+  height: 636px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 376px) {
+  .main_catalog__end {
+    height: 313px;
+  }
+}
+
+.main_catalog__end .main_catalog__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_catalog__end .link-button {
+  background-color: #FFFFFF;
+  text-decoration: none;
+  color: #373737;
+  padding: 12px 25px;
+  font-size: 15px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  min-width: 212px;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.main_catalog__end .box__title {
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .main_catalog__end .box__title {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=main.css.map */

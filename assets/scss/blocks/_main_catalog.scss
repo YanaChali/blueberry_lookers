@@ -6,6 +6,10 @@
     margin-bottom: 80px;
     font-size: 80%;
 
+    @media (max-width: $mobile){
+        margin-bottom: 30px;
+    }
+
     .link-button {
         @include whiteButton;
         position: relative;
@@ -88,4 +92,70 @@
     }
 }
 
+    .main_catalog__middle {
+        @include backIMG;
+        background: url(/assets/images/bag.svg);
+        height: 289px;
+        background-size: cover;
+        background-position: center;
 
+        @media (max-width: $mobile){
+            height: 313px;
+        }
+
+        .main_catalog__box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-gap: 24px;
+
+            @media (max-width: $mobile) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .link-button{
+            @include whiteButton;
+            position: relative;
+            min-width: 212px;
+            opacity: 1;
+        }
+
+        .box__title {
+            @include sectionTitle;
+            color: $white-color;
+            align-items: center;
+        }
+}
+    .main_catalog__end {
+        @include backIMG;
+        background: url(/assets/images/woman_end.svg);
+        height: 636px;
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width: $mobile){
+            height: 313px;
+        }
+
+        .main_catalog__box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .link-button {
+            @include whiteButton;
+            position: relative;
+            min-width: 212px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+
+        .box__title {
+            @include sectionTitle;
+            color: $white-color;
+        }
+    }
